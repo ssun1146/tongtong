@@ -3,18 +3,25 @@
     <head>
         <meta charset="UTF-8">
         <title>Document</title>
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        
         <h2 id="hello">안녕하세요</h2>
-        <h2 id="hi">올때메로나</h2>
+
+        <div class="alert_box">Alert 박스
+            <!-- 2깅 숙제 -->
+            <button onclick="document.getElementsByClassName('alert_box').style.display='none';">닫기</button>
+        </div>
+        <button onclick="document.getElementsByClassName('alert_box').style.display='block';">버튼</button>
+
 
         <script>
             document.getElementById('hello').innerHTML = '안녕';
-            document.getElementById('hi').innerHTML = '올때바밤바'; //ㅋㅋㅋㅋㅋ
 
             //1강 숙제
-            document.getElementById('hello').style.fontSize = '30px';
+            // document.getElementById('hello').style.fontSize = '30px';
+
+
         </script>
 
     </body>
