@@ -11,9 +11,10 @@
         <div class="alert_box">
             <p>Alert 박스</p>
             <!-- 2깅 숙제 -->
-            <button onclick="alertHide()">닫기</button>
+            <button onclick="alertToggle(none)">닫기</button>
         </div>
-        <button onclick="alertShow()">버튼</button>
+        <button onclick="alertToggleText(block, '아이디입력해')">아이디버튼</button>
+        <button onclick="alertToggleText(block, '비번입력해')">비번버튼</button>
 
 
         <script>
@@ -23,13 +24,25 @@
             // document.getElementById('hello').style.fontSize = '30px';
 
             // function 문법 :: 긴 코드를 한단어로 축약하기 위해 사용.
-            function alertShow(){
-                document.getElementsByClassName('alert_box').style.display='block';
+            // function 문법 :: 파라미터를 넣어서 함수를 업그레이드
+            // function alertShow(){
+            //     document.getElementsByClassName('alert_box').style.display='block';
+            // }
+
+            // // 3강 숙제
+            // function alertHide(){
+            //     document.getElementsByClassName('alert_box').style.display='none';
+            // }
+
+            // 함수 한개로 기능 2개 만들기 ~.~
+            function alertToggle( param ){
+                document.getElementsByClassName('alert_box').style.display= param ;
             }
 
-            // 3강 숙제
-            function alertHide(){
-                document.getElementsByClassName('alert_box').style.display='none';
+            // 4강 숙제
+            function alertToggleText(param, txt){
+                document.getElementsByClassName('alert_box').style.display = param ;
+                document.getElementsByClassName('alert_box').innerHTML = txt ;
             }
 
         </script>
