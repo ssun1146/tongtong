@@ -41,6 +41,7 @@
 
         <script>
             // 폼이 전송될 때 >> input 이메일에 입력된 값이 빈칸일 때, 폼의 전송을 막고 안내문을 띄움.
+            // input 태그에 이벤트로 input, change 를 사용할 수 있음..!
             $("form").onSubmit(function(e){
                 if ( $(".form_email").val() == '' ){
                     e.preventDefault();
