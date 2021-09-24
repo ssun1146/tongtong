@@ -44,7 +44,12 @@
             $("form").onSubmit(function(e){
                 if ( $(".form_email").val() == '' ){
                     e.preventDefault();
-                    alert("머여!");
+                    // alert("머여!"); 안내문 띄우려고 했음..!
+                }
+
+                if ( $(".form_password").val() == ''){
+                    e.preventDefault();
+                    // alert("머여!"); 안내문 띄우려고 했음..!
                 }
             })
             
