@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://m.club5678.com/inc/js/jquery-1.8.3.min.js?ver=1.8.3"></script>
+        
+    </head>
+    <body>
+        
+        <script>
+            // 정규식 :: 문자를 검사할 때 쓰는 정규식.
+            // 정규식 관련한 문법이 너무 많은뎅. DB를 하지 않는한 구냥 검색한대유.
+            // ex) email regular expression 이런식으로 
+            /abc/.test(".abcdefg");
+            
+            // 정규식 문법
+            // [A-Z] :: 대문자 A부터 Z까지 || [A-z] :: 영문 전체 || [ㄱ-ㅎ]
+            // [\S] :: 특수문자 포함 모든 문자 1개.  \S  || [\S+] :: 문자 여러개를 검사함!
+            // [\S@] :: 모든 문자 1개 다음에 @가 나온당! 
+
+            /[A-Z]/.test('s');
+            
+            // 이메일 정규식
+            // [\S+\@\S+\.\S+] << 특수문자 ( \. ) 앞에서는 역슬래시 사용! 
+
+
+            $(".form").onSubmit(function(e){
+                if ( /[\S+@\S+\.\S+]/.test($(".input").val()) == false ){
+                    e.preventDefault();
+                }
+            })
+
+
+        </script>
+
+    </body>
+</html>
