@@ -16,11 +16,7 @@ var tabLength = $(".tab-button").length();
 // let 사용하면, for 반복문 내에서 참조할 수 있는 범위를 가짐!
 for ( let  i = 0; i < tabLength ; i++ ){ 
     $(".tab-button").eq(i).click(function(){
-        $(".tab-button").removeClass("active");
-        $(".tab-content").removeClass("show");
-
-        $(this).addClass("active");
-        $(".tab-content").eq(i).addClass("show");
+        openTab(i);
     })
 }
 
@@ -52,3 +48,13 @@ $(".modal_bg").click(function(e){
     // jquery 문법이랑 js 문법이 같이 쓰이면 문제가 될 때가 있는데 이걸 방지하기 위해 하나로 통일하는게 좋겟지
     
 })
+
+// 함수로 축약할 때, 사용한 변수는 파라미터로 넣어주면 아주 좋지요 +_+
+function openTab(num){
+    $(".tab-button").removeClass("active");
+    $(".tab-content").removeClass("show");
+
+    $(this).addClass("active");
+    $(".tab-content").eq(num).addClass("show");
+}
+
