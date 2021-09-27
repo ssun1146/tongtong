@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+        <style>
+        
+        </style>
+    </head>
+    <body>
+        <h4 class="shopTitle">상품제목</h4>
+        <p class="shopDesc">상품내용</p>
+        <div style="margin-bottom:500px"></div>
+      
+
+        <script src="https://m.club5678.com/inc/js/jquery-1.8.3.min.js?ver=1.8.3"></script>
+        <script>
+            var name = '글자' // 자료형 :: 문자 (String)
+            var age = 20        // 자료형 :: 숫자 (Number)
+
+            // array & object :: 여러 자료를 한곳에 저장하고 싶을 때 
+            var arrayy = ['BMW', '520', '희희', 24, ['1', '2', '3']];
+            arrayy[2]       // 희희
+
+            var objectt = {brand: 'BMW', model: 520} 
+            objectt.brand;  // BMW
+
+
+            var shopData = {title: '맛있는홍차', desc: '이 상품은 매우조아영'}
+            document.getElementsByClassName("shopTitle").innerText = shopData.title;
+            document.getElementsByClassName("shopDesc").innerText = shopData.desc;
+
+
+            var Dataa = [ {brand: 'BMW'}, {model : 520} ];
+            document.getElementsByClassName("shopDesc").innerText = Dataa[1].model;
+
+        </script>
+    </body>
+</html>
