@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://m.club5678.com/inc/js/jquery-1.8.3.min.js?ver=1.8.3"></script>
+        <style>
+            .wrap{position:relative; }
+            .slide__wrap{width:300vw; }
+            .slide_box{width:100vw; float:left; transition:transform .4s ease; }
+            .slide_box img{width:100%; }
+
+            .slide_prev{position:absolute; top:50%; left:16px; transform:translateY(-50%); z-index:1 }
+            .slide_next{position:absolute; top:50%; right:16px; transform:translateY(-50%); z-index:1; }
+        </style>
+    </head>
+    <body>
+
+        <h4 style="text-align:center; margin:4px 0; ">ShowCase</h4>
+        <div class="wrap" style="overflow:hidden; ">
+            <button class="slide_prev">이전</button>
+            <div class="slide__wrap">
+                <div class="slide_box">
+                    <img src="http://photo.club5678.com/prg/_app/www/club5678/image.php?type=album&parent=&child=&viewSlct=&viewname=MjMyOjA1NTJXOzo5PT04PSggIyIkJSIvLSoiNXZteQ==" >
+                </div>
+                <div class="slide_box">
+                    <img src="http://photo.club5678.com/prg/_app/www/club5678/image.php?type=album&parent=&child=&viewSlct=&viewname=MjMyOjA1NTJXOzo5PT04PSggIyIkJSIvIC4oNXZteQ==">
+                </div>
+                <div class="slide_box">
+                    <img src="http://photo.club5678.com/prg/_app/www/club5678/image.php?type=album&parent=&child=&viewSlct=&viewname=MjMyOjA1NTJXOzo5PT04PSggIyIkJSMnLCwuNXZteQ==">
+                </div>
+            </div>
+            <button class="slide_next">다음</button>
+        </div>
+
+        
+        <button class="btn01">1</button>
+        <button class="btn02">2</button>
+        <button class="btn03">3</button>
+        
+
+        
+        <div style="margin:5px 0;"></div>
+
+
+
+        <script>
+            var nowOnPhoto = 1 ; 
+
+            $(".slide_next").click(function(){
+                $(".slide__wrap").css({"translateX":"-"+nowOnPhoto+"00vw"});
+                if ( nowOnPhoto < $(".slide_box").length() ){
+                    nowOhPhoto = nowOnPhoto + 1; 
+                } else {
+                    nowOnPhoto = 1; 
+                }
+            })
+
+            $(".slide_prev").click(function(){
+                $(".slide__wrap").css({"translateX":"-"+nowOnPhoto+"00vw"});
+                if ( nowOnPhoto > 1 ){
+                    nowOnPhoto = nowOnPhoto - 1; 
+                } else {
+                    nowOnPhoto = 1 ; 
+                }
+            })
+
+            // $(".slide_next").click(function(){
+            //     if( nowOnPhoto == 1 ){ 
+            //         $(".slide__wrap").css({"translateX":"-100vw"});
+            //         nowOnPhoto = nowOnPhoto + 1;
+            //     } else if ( nowOnPhoto ==  2 ){
+            //         $(".slide__wrap").css({"translateX":"-200vw"});
+            //         nowOnPhoto = nowOnPhoto + 1;
+            //     } else if ( nowOnPhoto == 3 ){
+            //         $(".slide__wrap").css({"translateX":"0"});
+            //         nowOnPhoto = 1; 
+            //     }
+            // })
+
+           
+
+
+
+
+            $(".btn02").click(function(){
+                $(".slide__wrap").css({"translateX" : "-100vw"})
+                // $(".slide__wrap").animate({});
+            });
+            $(".btn03").click(function(){
+                $(".slide__wrap").css({"translateX":"-200vw"});
+            });
+            $(".btn01").click(function(){
+                $(".slide__wrap").css({"translateX":"0"});
+            });
+
+        </script>
+
+    </body>
+</html>
