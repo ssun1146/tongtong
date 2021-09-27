@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+        <style>
+            .wrap{width:1200px; margin:5px auto;}
+
+            ul.list {list-style-type:none; margin:0; padding:0; border-bottom:1px solid #ccc; }
+            ul.list::after{content: ''; display:block; clear:both;}
+            .tab-button{display:block; padding:10px 20px 10px 20px; float:left; margin-right:-1px; margin-bottom:-1px; color:grey; text-decoration:none; cursor:pointer; }
+            .active{border-top:2px solid orange; border-right:1px solid #ccc; border-bottom:1px solid white; border-left:1px solid #ccc; color:black;	margin-top:-2px;}
+            .tab-content {display:none; padding:10px; }
+            .show {display:block;}
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <ul class="list">
+                <li class="tab-button">Products</li>
+                <li class="tab-button active">Information</li>
+                <li class="tab-button">Shipping</li>
+            </ul>
+        
+            <div class="tab-content">
+                <p>상품설명입니다. Product</p>
+            </div>
+            <div class="tab-content show">
+                <p>상품정보입니다. Info</p>
+            </div>
+            <div class="tab-content">
+                <p>배송정보입니다. Shipping</p>
+            </div>
+        </div>
+
+        <script src="https://m.club5678.com/inc/js/jquery-1.8.3.min.js?ver=1.8.3"></script>
+        <script src="tab.js"></script>
+
+    </body>
+</html>
